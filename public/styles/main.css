@@ -1,0 +1,17 @@
+
+.main{
+    font-size: 70px!important;
+    font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 87.5;
+}
+
+.cent{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: fit-content;
+}

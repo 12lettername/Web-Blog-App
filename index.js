@@ -15,6 +15,7 @@ app.set("view engine", "ejs")
 //app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({extended: false}))
 app.use(methodOverride("_method"))
+app.use(express.static("public"));
 
 
 app.get("/", async (req, res) => {
