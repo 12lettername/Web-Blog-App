@@ -7,6 +7,10 @@ import {JSDOM} from "jsdom";
 const dompurify = createDomPurifier(new JSDOM().window)
 
 const schema = new mongoose.Schema({
+    name:{
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true

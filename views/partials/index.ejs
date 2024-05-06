@@ -11,7 +11,7 @@
               <div class="card-body">
                 <h4 class="card-title fst-italic title"><%= article.title %></h4>
                 <div class="card-subtitle text-muted mb-4">
-                  Written on <%= article.date.toLocaleDateString() %> at <%= article.date.toLocaleTimeString() %>
+                  Written on <%= article.date.toLocaleDateString() %> at <%= article.date.toLocaleTimeString() %> by <%= article.name %>
                 </div>
                 
                 <a href="blog/<%= article.slug %>" class="text-body-emphasis fw-bold fst-italic">Read Full Blog. . .</a>

@@ -3,7 +3,7 @@
    <div class="container">
         <h1 class="fst-italic text-center" style="font-size: 80px!important;"><%= article.title %></h1>
         <div class="text-muted mb-4 text-center">
-            Written on <%= article.date.toLocaleDateString() %> at <%= article.date.toLocaleTimeString() %> 
+            Written on <%= article.date.toLocaleDateString() %> at <%= article.date.toLocaleTimeString() %> by <%= article.name %>
         </div>
         <div style="font-size: 35px;">
             <%- article.sanitizedHTML %>
