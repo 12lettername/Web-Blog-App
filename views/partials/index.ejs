@@ -1,20 +1,29 @@
 <%- include('header.ejs') %>
 <body>
-   
+    <hr>
     <div class="container">
        
-        <a href="/blog/new" class="cent btn btn-outline-light btn-lg mb-4">Start Writing...</a>
+      <div class="p-5 mb-1">
+       <h3 class="text-center fw-bold mb-4">Welcome to Your Personal Corner</h3>
+       <p class="text-center">Your Destination for Insightful Stories and Engaging Conversations</p>
+       
+       
+      </div>
+      <h4 class="text-center mb-3">Start your journey by writing your own blog or read blogs written by others</h4>
+        <a href="/blog/new" class="cent btn btn-outline-light btn-lg mb-4">Start Writing</a>
 
 
         <% articles.forEach(article => { %>
-            <div class="card rounded m-4 bg-body-secondary">
+            <div class="card rounded my-4 bg-body-secondary">
               <div class="card-body">
                 <h4 class="card-title fst-italic title"><%= article.title %></h4>
                 <div class="card-subtitle text-muted mb-4">
                   Written on <%= article.date.toLocaleDateString() %> at <%= article.date.toLocaleTimeString() %> by <%= article.name %>
                 </div>
-                
-                <a href="blog/<%= article.slug %>" class="text-body-emphasis fw-bold fst-italic">Read Full Blog. . .</a>
+                <a href="blog/<%= article.slug %>" class="icon-link icon-link-hover">
+                  Read Full Blog<i class="bi bi-chevron-right"></i>   
+                </a>
+                            
                 <form action="/blog/<%= article.id %>?_method=DELETE" method="POST" class="mt-2">
                   <button type="submit" class="btn btn-outline-danger">Delete</button>
                 </form>
@@ -23,4 +32,5 @@
           <% }) %>
 
     </div>
+  <%- include('footer.ejs') %>
 </body>
