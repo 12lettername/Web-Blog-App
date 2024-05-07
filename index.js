@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import Article from "./models/articles.js";
 import methodOverride from "method-override";
 
+
 const app = express();
 const port = 3000;
 
